@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Econest | Authenticate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+  <div class="auth-container card fade-in">
+    <div class="auth-header">
+      <h1>Welcome to Econest</h1>
+      <p>Sign in to continue building sustainable routines.</p>
+    </div>
+
+    <section id="loginForm" class="auth-form active">
+      <h2>Login</h2>
+      <form>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <label>Password</label>
+        <input type="password" name="password" placeholder="•••••••" required />
+        <small class="password-hint">Password must be at least 8 characters long.</small>
+        <button type="submit" class="btn primary full">Log In</button>
+        <button type="button" class="btn ghost full" id="toggleMode">Switch to Signup</button>
+      </form>
+    </section>
+
+    <section id="signupForm" class="auth-form">
+      <h2>Create Account</h2>
+      <form>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Green Guardian" required />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Create a strong password" required />
+        <small class="password-hint">Password must be at least 8 characters long.</small>
+        <button type="submit" class="btn primary full">Sign Up</button>
+      </form>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <div id="loader" class="loader hidden"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

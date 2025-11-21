@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Econest | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-grid fade-in">
+    <div class="dashboard-left">
+      <section class="card score-card" id="dailyScoreCard">
+        <h2>Daily Sustainability Score</h2>
+        <p class="score-value" id="dailyScoreValue">--</p>
+        <p class="score-caption">Track today’s eco impact.</p>
+      </section>
+
+      <section class="card score-card" id="averageScoreCard">
+        <h2>Average Sustainability Score</h2>
+        <p class="score-value" id="averageScoreValue">--</p>
+        <p class="score-caption">Consistency creates momentum.</p>
+      </section>
+
+      <section class="card list-card">
+        <h3>Progress Points</h3>
+        <ul id="progressList" class="pill-list"></ul>
+      </section>
+
+      <section class="card list-card">
+        <h3>Improvements to Growth Areas</h3>
+        <ul id="growthList" class="pill-list"></ul>
+      </section>
+
+      <div class="list-card ai-tips-card">
+        <h3>AI Tips</h3>
+        <textarea class="ai-tips-input" readonly>
+          Your personalized eco-tips will appear here.
+        </textarea>
+    </div>
+    
+    </div>
+
+    <div class="dashboard-right card chart-card">
+      <div class="section-heading">
+        <h2>Trend</h2>
+        <span>This week</span>
+      </div>
+      <canvas id="trendChart" height="260"></canvas>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <div id="loader" class="loader hidden"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
