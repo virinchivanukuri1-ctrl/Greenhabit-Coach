@@ -1,0 +1,21 @@
+.log-card {
+  width: min(780px, 100%);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#transportDetails,
+#smokingLog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
