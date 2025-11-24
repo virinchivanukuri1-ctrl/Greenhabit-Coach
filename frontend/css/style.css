@@ -109,14 +109,25 @@ input, select, textarea {
 }
 
 select {
-  background: #fff;
-  color: #000;
-  border-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--box-green) !important;
+  color: rgb(80, 74, 74) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-emphasis-color: white;
 }
 
 select option {
-  background: #fff;
-  color: #000;
+  background-color: var(--box-green) !important;
+  color: rgb(80, 74, 74) !important;
+  text-emphasis-color: white;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 label {
@@ -245,7 +256,7 @@ body.landing {
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: repeat(6, minmax(60px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
   padding: 2rem;
   z-index: 0;
@@ -253,20 +264,20 @@ body.landing {
 }
 
 .collage-tile {
+  height: 200px; /* perfect rectangle height */
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  min-height: 120px;
 }
 
-.collage-tile.tall {
+/*.collage-tile.tall {
   grid-row: span 2;
   min-height: 240px;
 }
 
 .collage-tile.wide {
   grid-column: span 2;
-}
+}*/
 
 .home-options {
   position: relative;
